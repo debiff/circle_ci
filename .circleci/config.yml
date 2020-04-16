@@ -23,7 +23,9 @@ jobs:
             pip install -r requirements.txt
       - run:
           name: Test
-          command: pytest --cov=./
+          command: |
+            python -m pytest
+            pytest --cov=./
       - run:
           name: CodCov
           command: |
