@@ -16,6 +16,11 @@ jobs:
             ls -al
             echo '^^^That should look familiar^^^'
       - run:
+          name: Env preparation
+          command: |
+            pip install poetry
+            poetry install
+      - run:
           name: CodCov
           command: |
             apt-get update
