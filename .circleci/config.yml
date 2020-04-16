@@ -19,7 +19,8 @@ jobs:
           name: Env preparation
           command: |
             pip install poetry
-            poetry install
+            poetry export -f requirements.txt > requirements.txt --dev
+            pip install -r requirements.txt
       - run:
           name: Test
           command: |
