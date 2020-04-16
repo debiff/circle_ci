@@ -16,4 +16,9 @@ jobs:
             ls -al
             echo '^^^That should look familiar^^^'
             python -v
+      -run:
+          name: CodCov
+          command: |
+            export CODECOV_TOKEN=`42dc6b18-1582-4f40-b780-644325f9b874`
+            bash <(curl -s https://codecov.io/bash)
 
