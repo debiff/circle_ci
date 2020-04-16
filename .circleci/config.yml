@@ -22,7 +22,9 @@ jobs:
             poetry install
       - run:
           name: Test
-          command: poetry python -m pytest
+          command: |
+            poetry shell
+            pytest --cov=./
       - run:
           name: CodCov
           command: |
