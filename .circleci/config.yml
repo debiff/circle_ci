@@ -20,9 +20,9 @@ jobs:
           command: |
             pip install poetry
             poetry install
-      -run:
-        name: Test
-        command: poetry python -m pytest
+      - run:
+          name: Test
+          command: poetry python -m pytest
       - run:
           name: CodCov
           command: |
