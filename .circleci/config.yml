@@ -18,7 +18,8 @@ jobs:
       - run:
           name: CodCov
           command: |
-            apt install curl
+            apt-get update
+            apt-get -y install curl
             export CODECOV_TOKEN=`42dc6b18-1582-4f40-b780-644325f9b874`
             bash <(curl -s https://codecov.io/bash)
 
