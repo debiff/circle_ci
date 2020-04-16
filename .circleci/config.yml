@@ -24,8 +24,8 @@ jobs:
       - run:
           name: Test
           command: |
-          python -m pytest
-          pytest --cov=./
+            python -m pytest
+            pytest --cov=./
       - run:
           name: CodCov
           command: |
